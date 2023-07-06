@@ -1,5 +1,6 @@
 package com.learnspring.jpahibernate.course;
 
+import com.learnspring.jpahibernate.Course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -8,12 +9,22 @@ import org.springframework.stereotype.Repository;
 public class CourseJdbcRepository {
     @Autowired
     private JdbcTemplate jdbcTemplate;
-    private String query =
+    @Autowired
+    private Course course;
+    private static String query =
             """
                     insert into course (id, name, author)
-                    values(1, 'learn AWS', 'Sree')
+                    values(?, ?, ?);
                     """;
-    public void insert(){
-        jdbcTemplate.update(query);
+    private static String delete_query=
+            """
+                    delete from course where id = ?
+                    """;
+    public void insert(Course course){
+        jdbcTemplate.update(query, course.getId(), course.getCourseName(), course.getCourseAuthor());
+    }
+
+    public void delete(Long id){
+        jdbcTemplate.update(delete_query,id);
     }
 }

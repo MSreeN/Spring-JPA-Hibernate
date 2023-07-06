@@ -8,6 +8,15 @@ public class Course {
     private String courseName;
     private String courseAuthor;
 
+    public Course(long id, String courseName, String courseAuthor) {
+        this.id = id;
+        this.courseName = courseName;
+        this.courseAuthor = courseAuthor;
+    }
+
+    public Course(){
+
+    }
     public long getId() {
         return id;
     }
@@ -32,11 +41,7 @@ public class Course {
         this.courseAuthor = courseAuthor;
     }
 
-    public Course(long id, String courseName, String courseAuthor) {
-        this.id = id;
-        this.courseName = courseName;
-        this.courseAuthor = courseAuthor;
-    }
+
 
     @Override
     public String toString() {
