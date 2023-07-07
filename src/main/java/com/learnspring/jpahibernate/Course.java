@@ -5,13 +5,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class Course {
     private long id;
-    private String courseName;
-    private String courseAuthor;
+    private String name;
+    private String author;
 
-    public Course(long id, String courseName, String courseAuthor) {
+    public Course(long id, String name, String Author) {
         this.id = id;
-        this.courseName = courseName;
-        this.courseAuthor = courseAuthor;
+        this.name = name;
+        this.author = Author;
     }
 
     public Course(){
@@ -25,20 +25,20 @@ public class Course {
         this.id = id;
     }
 
-    public String getCourseName() {
-        return courseName;
+    public String getName() {
+        return name;
     }
 
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getCourseAuthor() {
-        return courseAuthor;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setCourseAuthor(String courseAuthor) {
-        this.courseAuthor = courseAuthor;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
 
@@ -47,8 +47,8 @@ public class Course {
     public String toString() {
         return "Course{" +
                 "id=" + id +
-                ", courseName='" + courseName + '\'' +
-                ", courseAuthor='" + courseAuthor + '\'' +
+                ", name='" + name + '\'' +
+                ", Author='" + author + '\'' +
                 '}';
     }
 }
