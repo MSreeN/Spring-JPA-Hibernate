@@ -4,7 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import org.springframework.stereotype.Component;
 
-@Entity(name="Course")
+@Entity
 public class Course {
     @Id
     private long id;
