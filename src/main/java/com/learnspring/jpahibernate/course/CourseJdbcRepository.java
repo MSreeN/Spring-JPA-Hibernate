@@ -16,7 +16,7 @@ import java.util.List;
 public class CourseJdbcRepository {
     @Autowired
     private JdbcTemplate jdbcTemplate;
-    @Autowired
+//    @Autowired
     private Course course;
     private static String query =
             """
