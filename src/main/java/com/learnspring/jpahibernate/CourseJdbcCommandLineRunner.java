@@ -9,8 +9,8 @@ import org.springframework.stereotype.Repository;
 
 @Component
 public class CourseJdbcCommandLineRunner implements CommandLineRunner {
-//    @Autowired
-//    CourseJdbcRepository courseJdbcRepository;
+    @Autowired
+    CourseJdbcRepository courseJdbcRepository;
 
     @Autowired
     CourseJpaRepository courseJpaRepository;
